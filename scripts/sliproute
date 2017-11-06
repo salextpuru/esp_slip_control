@@ -1,0 +1,11 @@
+#!/bin/bash
+
+IP=192.168.240.2
+GW=192.168.240.1
+REMOTENET=192.168.43.0/24
+
+echo "Set route for net $3 via gateway $2, local IP $1"
+sudo ifconfig sl0 $IP pointopoint $GW up mtu 1500
+sudo ip route add $REMOTENET via $GW dev sl0
+
+# sudo ifconfig sl0 192.168.240.2 pointopoint 192.168.240.1 up mtu 1500

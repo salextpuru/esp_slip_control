@@ -1,0 +1,9 @@
+~*
+*~
+*.o
+*.bin
+*.a
+*.out
+build*
+
+.kdev_include_paths
